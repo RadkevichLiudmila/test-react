@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
-import List from '../list';
+
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import { ListPage, ServicePage } from '../pages';
+
+
 import ButtonMaterialUI from '../button';
+//import RandomuserService from '../../services/service';
+
+//import { SwapiServiceProvider } from '../swapi-service-context';
 
 //import classNames from 'classnames';
 //import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+
 
 //import { Link } from 'react-router'
 //import List from '../list';
@@ -12,26 +20,20 @@ import Button from '@material-ui/core/Button';
 import './app.css';
 import { Toolbar } from '@material-ui/core';
 
-
-export default class App extends Component {   
+export default class App extends Component {  
    
-    
     render() {
-        const todoData = [
-            { label: 'Иванов', director: true, id: 1},
-            { label: 'Петров', director: false, id: 2},
-            { label: 'Сидоров', director: false, id: 3}
-        ];
 
-        
-       
         return (
+            <Router>
             <div>
-                <List todos={todoData} />
                 
+                <Route path="/list" component={ListPage} />
+                <Route path="/service" component={ServicePage} />
                 <ButtonMaterialUI />
                 
             </div>
+            </Router>
             
         )
     }

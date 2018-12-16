@@ -1,8 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+
+import { Link } from 'react-router-dom';
 
 
 // We can inject some CSS into the DOM.
@@ -23,12 +25,16 @@ function ClassNames(props) {
   const { value, classes, children, className, ...other } = props;
   return (
       <div>
-        <Button className={classNames(classes.root, className)} {...other}>
-            List
-        </Button>
-        <Button className={classNames(classes.root, className)} {...other}>
-            Service
-        </Button>
+        <Link to="/list">
+          <Button className={classNames(classes.root, className)} {...other}>
+              List
+          </Button>
+        </Link>
+        <Link to="/service">
+          <Button className={classNames(classes.root, className)} {...other}>
+              Service
+          </Button>
+        </Link>
       </div>
       
     
