@@ -1,13 +1,10 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
 import { Link } from 'react-router-dom';
 
-
-// We can inject some CSS into the DOM.
 const styles = {
   root: {
     background: 'linear-gradient(45deg, #0602a2 30%, #030156 90%)',
@@ -40,11 +37,5 @@ function ClassNames(props) {
     
   );
 }
-/*
-ClassNames.propTypes = {
-  children: PropTypes.node,
-  classes: PropTypes.object.isRequired,
-  className: PropTypes.string,
-};
-*/
+
 export default withStyles(styles)(ClassNames);

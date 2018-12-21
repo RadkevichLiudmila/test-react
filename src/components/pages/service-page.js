@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-//import List from '../list';
 
+import RandomUserService from '../../services/service';
 
-export default class ServicePage extends Component {  
+export default class ServicePage extends Component {
+     
     render() {
-        
 
         return (
-                
             <div>
-                <p>Ghbdtn!</p>
+                <p>Service</p>
+                <RandomUserService />
             </div>
             
         )

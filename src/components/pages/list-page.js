@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import List from '../list';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 
 export default class ListPage extends Component {  
@@ -14,8 +15,9 @@ export default class ListPage extends Component {
         return (
                 
             <div>
-                <p>hay!</p>
-                <Button variant="contained" color="primary" >Add</Button>
+                <Link to="/add">
+                    <Button variant="contained" color="primary" >Add</Button>
+                </Link>
                 <List todos={todoData} />
             </div>
             

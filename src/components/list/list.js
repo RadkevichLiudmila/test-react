@@ -18,6 +18,14 @@ export default class List extends Component {
 
 const List = ({ todos }) => {
 
+   /* onToggleDone = (id) => {
+        console.log(id);
+       /* this.setState((state) => {
+          const items = this.toggleProperty(state.items, id, 'done');
+          return { items };
+        });*/
+     // };
+
     const elements = todos.map((item) => {
 
         const { id, ... itemProps } = item;
@@ -29,7 +37,7 @@ const List = ({ todos }) => {
         )
     })
     return (
-        <ul>
+        <ul >
             { elements }
         </ul>
     )
